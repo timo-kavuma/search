@@ -1,5 +1,6 @@
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
+from django.urls import reverse
 import datetime
 from django.utils import timezone
 from django.utils.text import slugify

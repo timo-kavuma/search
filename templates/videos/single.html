@@ -1,12 +1,12 @@
 {% extends "base.html" %}
-{% block title %} single {% endblock %} 
+{% block title %} {{ video.title }} {% endblock %} 
 {% block content %}			
 <div id="content" class="site-content row">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 			
-	<article id="post-35991" class="post-35991 post type-post status-publish format-video has-post-thumbnail hentry category-close-ups tag-chubby tag-close tag-fuck post_format-post-format-video" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+	<article id="{{ video.id }}" class="post-35991 post type-post status-publish format-video has-post-thumbnail hentry category-close-ups tag-chubby tag-close tag-fuck post_format-post-format-video" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
 		
 		<div class="entry-content">
 			
@@ -16,32 +16,14 @@
 						<meta itemprop="author" content="Admin" />
 						<meta itemprop="name" content="wwwpornthey.com &#8211; close up chubby fuck" />
 						<meta itemprop="description" content="wwwpornthey.com &#8211; close up chubby fuck" />
-						<meta itemprop="duration" content="P0DT0H3M0S" />
-						<meta itemprop="thumbnailUrl" content="https://img-egc.xvideos-cdn.com/videos/thumbs169lll/74/fe/29/74fe29bf753a2cef702d781569a1b37a/74fe29bf753a2cef702d781569a1b37a.1.jpg" />
-						<meta itemprop="embedURL" content="https://www.xvideos.com/embedframe/22010635" />
+						<meta itemprop="duration" content="#" />
+						<meta itemprop="thumbnailUrl" content="video.screenshot" />
+						<meta itemprop="embedURL" content="{{ video.embed }}" />
 						<meta itemprop="uploadDate" content="2019-07-12T16:34:37+01:00" />
 
 					<div class="responsive-player">
-					<iframe src="https://xrateddb.com/wp-content/plugins/clean-tube-player/public/player-x.php?q=X3dwbm9uY2U9N2UyOGI1YzBmNyZwb3N0X2lkPTM1OTkxJnR5cGU9aWZyYW1lJnRhZz0lM0NpZnJhbWUlMjBzcmMlM0QlMjJodHRwcyUzQSUyRiUyRnd3dy54dmlkZW9zLmNvbSUyRmVtYmVkZnJhbWUlMkYyMjAxMDYzNSUyMiUyMGZyYW1lYm9yZGVyJTNEJTIyMCUyMiUyMHdpZHRoJTNEJTIyNTEwJTIyJTIwaGVpZ2h0JTNEJTIyNDAwJTIyJTIwc2Nyb2xsaW5nJTNEJTIybm8lMjIlMjBhbGxvd2Z1bGxzY3JlZW4lM0QlMjJhbGxvd2Z1bGxzY3JlZW4lMjIlMjBzYW5kYm94JTNEJTIyYWxsb3ctc2FtZS1vcmlnaW4lMjBhbGxvdy1zY3JpcHRzJTIyJTNFJTNDJTJGaWZyYW1lJTNF" frameborder="0" scrolling="no" allowfullscreen></iframe>			</div>
-			
-			<!-- Inside video player advertising -->
-			<div class="happy-inside-player">
-				<div class="zone-1">
-					<!-- JuicyAds v3.0 -->
-					<script type="text/javascript" data-cfasync="false" async src="https://adserver.juicyads.com/js/jads.js"></script>
-					<ins id="768781" data-width="300" data-height="262"></ins>
-					<script type="text/javascript" data-cfasync="false" async>(adsbyjuicy = window.adsbyjuicy || []).push({'adzone':768781});</script>
-					<!--JuicyAds END-->
+					<iframe src="{{ video.embed }}" frameborder="0" scrolling="no" allowfullscreen></iframe>
 				</div>
-				<div class="zone-2">
-					<!-- JuicyAds v3.0 -->
-					<script type="text/javascript" data-cfasync="false" async src="https://adserver.juicyads.com/js/jads.js"></script>
-					<ins id="768782" data-width="300" data-height="262"></ins>
-					<script type="text/javascript" data-cfasync="false" async>(adsbyjuicy = window.adsbyjuicy || []).push({'adzone':768782});</script>
-					<!--JuicyAds END-->
-				</div>
-						<button class="close close-text">Close Advertising</button>
-			</div>
 		</div>
 
 				<div class="happy-under-player">
@@ -56,7 +38,7 @@
 				
 		<div class="video-infos">
 			<div class="title-views">
-				<h1 itemprop="name">wwwpornthey.com &#8211; close up chubby fuck</h1>					</div>
+				<h1 itemprop="name">{{ video.title }}</h1>
 			</div>
 
 			<div class="video-actions">

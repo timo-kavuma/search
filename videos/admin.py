@@ -5,3 +5,5 @@ from .models import Video
 @admin.register(Video)
 class VideoAdmin(admin.ModelAdmin):
     list_display = ('title', 'url', 'embed', 'screenshot', 'trailer', 'mediatype', 'partner')
+    order_by = ('title',)
+    search_fields = ('title',)
