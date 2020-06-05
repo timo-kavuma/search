@@ -1,14 +1,17 @@
+from django.contrib.postgres.search import SearchVector
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404
 from .models import Video
-from random import shuffle
+import random
+#from random import shuffle
 
 # Create your views here.
 def index(request):
     #categories = ['POV', 'Kissing', 'Booty', 'Hardcore', 'Passion', 'Amatuer', 'Latina', 'Teens', 'College', 'Petite', 'HD', 'Cameltoe']
-  
+    #selection = random.choice(categories)
+    
+    #videos_list = Video.objects.annotate(search=SearchVector(selection),) 
     videos_list = Video.objects.all().order_by('?')
-    #selection = shuffle(videos_list)
         
     paginator = Paginator(videos_list, 80) # 80 posts in each page
     page = request.GET.get('page')

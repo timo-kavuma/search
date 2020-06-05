@@ -6,24 +6,22 @@
 		<main id="main" class="site-main" role="main">
 
 			
-	<article id="{{ video.id }}" class="post-35991 post type-post status-publish format-video has-post-thumbnail hentry category-close-ups tag-chubby tag-close tag-fuck post_format-post-format-video" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+	<article id="video.id" class="post type-post status-publish format-video has-post-thumbnail hentry category-close-ups tag-chubby tag-close tag-fuck post_format-post-format-video" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
 		
 		<div class="entry-content">
 			
 	<div class="video-player-area 
 		with-sidebar-ads">
 					<div class="video-player">
-						<meta itemprop="author" content="Admin" />
-						<meta itemprop="name" content="wwwpornthey.com &#8211; close up chubby fuck" />
-						<meta itemprop="description" content="wwwpornthey.com &#8211; close up chubby fuck" />
-						<meta itemprop="duration" content="#" />
-						<meta itemprop="thumbnailUrl" content="video.screenshot" />
+						<meta itemprop="name" content="{{ video.title }}" />
+						<meta itemprop="description" content="{{ video.description }}" />
+						<meta itemprop="duration" content="P0DT0H3M0S" />
+						<meta itemprop="thumbnailUrl" content="{{ video.screenshot }}" />
 						<meta itemprop="embedURL" content="{{ video.embed }}" />
-						<meta itemprop="uploadDate" content="2019-07-12T16:34:37+01:00" />
 
 					<div class="responsive-player">
-					<iframe src="{{ video.embed }}" frameborder="0" scrolling="no" allowfullscreen></iframe>
-				</div>
+					<iframe src="{{ video.embed }}" frameborder="0" scrolling="no" allowfullscreen></iframe>			</div>
+			
 		</div>
 
 				<div class="happy-under-player">
@@ -38,14 +36,21 @@
 				
 		<div class="video-infos">
 			<div class="title-views">
-				<h1 itemprop="name">{{ video.title }}</h1>
+				<h1 itemprop="name">{{ video.title }}</h1>					</div>
 			</div>
 
 			<div class="video-actions">
 			</div>   
 		
 			<div class="video-tags">
-				<div class="tags-list"><a href="https://xrateddb.com/tag/chubby/" class="label" title="chubby"><i class="fa fa-tag"></i> chubby</a><a href="https://xrateddb.com/tag/close/" class="label" title="close"><i class="fa fa-tag"></i> close</a><a href="https://xrateddb.com/tag/fuck/" class="label" title="fuck"><i class="fa fa-tag"></i> fuck</a></div>		</div>
+				<div class="tags-list">
+					{% for tag in video.tag %}
+					<a href="https://xrateddb.com/tag/{{tag}}" class="label" title="{{ video.title }}">
+						<i class="fa fa-tag"></i> chubby
+					</a>
+					{% endfor %}
+				</div>
+			</div>
 		
 			<!-- Description -->
 			
