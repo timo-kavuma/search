@@ -104,9 +104,10 @@ HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
         'URL': 'http://62.171.142.193:9200/',
-        'INDEX_NAME': 'haystack',
+        'INDEX_NAME': 'videos',
     },
 }
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 #ES_HOST = os.getenv('ELASTIC_SEARCH_HOST')
 #ES_PORT = os.getenv('ELASTIC_SEARCH_PORT')

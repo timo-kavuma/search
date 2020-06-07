@@ -13,8 +13,9 @@ def index(request):
     #selection = random.choice(categories)
     
     #videos_list = Video.objects.annotate(search=SearchVector(selection),)
-    videos_list = Video.objects.annotate(search=SearchVector('title'),).order_by('?')
+    #videos_list = Video.objects.annotate(search=SearchVector('title'),).order_by('?')
     #videos_list = Video.objects.all().order_by('?')
+    videos_list = SearchQuerySet().all().order_by('?')
         
     paginator = Paginator(videos_list, 80) # 80 posts in each page
     page = request.GET.get('page')
