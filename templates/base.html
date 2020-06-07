@@ -278,8 +278,9 @@ img.emoji {
         </div>
 
         <div class="header-search">
-            <form method="get" id="searchform" action="https://xrateddb.com/">        
-                <input class="input-group-field" placeholder="12,649,840 videos" name="s" id="s" onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}" type="text" />                        
+            <form method="get" id="searchform" action=".">
+              {% csrf_token %}       
+                <input class="input-group-field" placeholder="12,649,840 videos" name="query" id="s" onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}" type="text" />                        
                 <input class="fa-input" type="submit" id="searchsubmit" value="&#xf002;" />        
             </form>
         </div>

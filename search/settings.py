@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.postgres',
+    'haystack',
     'videos.apps.VideosConfig',
 ]
 
@@ -97,6 +98,14 @@ DATABASES = {
         'HOST': os.getenv("PG_HOST"),
         'PORT': '5432',
     }
+}
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': 'http://62.171.142.193:9200/',
+        'INDEX_NAME': 'haystack',
+    },
 }
 
 #ES_HOST = os.getenv('ELASTIC_SEARCH_HOST')

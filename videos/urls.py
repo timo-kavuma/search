@@ -8,7 +8,7 @@ urlpatterns = [
     # The single page
     path('<slug:slug>', views.single, name='video_detail'),
     # The tags page
-    path('tags', views.tags, name='tags'),
+    path('tags', views.tags, name='video_tags'),
     # The search page
-    path('search', views.search, name='search'),
+    path('search', views.search, name='video_search'),
 ]
