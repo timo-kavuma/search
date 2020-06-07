@@ -1,0 +1,15 @@
+{{ object.url }}
+{{ object.embed }}
+{{ object.title }}
+{{ object.slug }}
+{{ object.description }}
+{{ object.dateadded }}
+{{ object.duration }}
+{{ object.screenshot }}
+{{ object.trailer }}
+{{ object.flipbook.all|join:", " }}
+{{ object.actors.all|join:", " }}
+{{ object.tags.all|join:", " }}
+{{ object.mediatype }}
+{{ object.partner }}
+
